@@ -1,6 +1,6 @@
 {
     "development": {
-        "port": 8000,
+        "port": 5000,
         "errorHandlerOptions": {
             "dumpExceptions": true,
             "showStack": true
