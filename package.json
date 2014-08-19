@@ -1,33 +1,36 @@
 {
-  "name": "JiveAPI",
-  "version": "0.0.1",
-  "description": "Jive API call to export discussion details in excel file",
-  "main": "server.js",
-  "dependencies": {
-    "cheerio": "0.17.0",
-    "excel-export": "0.3.11",
-    "express": "4.8.3",
-    "request": "2.40.0",
-    "body-parser": "1.6.5"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "prestart": "npm install",
-    "start": "node server.js",
-    "test": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ShivrajRath/JiveDiscussionQsExtractor.git"
-  },
-  "keywords": [
-    "jive",
-    "excel"
-  ],
-  "author": "@ShivrajRath",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ShivrajRath/JiveDiscussionQsExtractor/issues"
-  },
-  "homepage": "https://github.com/ShivrajRath/JiveDiscussionQsExtractor"
+    "name": "JiveAPI",
+    "version": "0.0.1",
+    "description": "Jive API call to export discussion details in excel file",
+    "main": "server.js",
+    "dependencies": {
+        "cheerio": "0.17.0",
+        "excel-export": "0.3.11",
+        "express": "4.8.3",
+        "request": "2.40.0",
+        "body-parser": "1.6.5"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "prestart": "npm install",
+        "start": "node server.js",
+        "test": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ShivrajRath/JiveDiscussionQsExtractor.git"
+    },
+    "engines": {
+        "node": "0.10.x"
+    },
+    "keywords": [
+        "jive",
+        "excel"
+    ],
+    "author": "@ShivrajRath",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ShivrajRath/JiveDiscussionQsExtractor/issues"
+    },
+    "homepage": "https://github.com/ShivrajRath/JiveDiscussionQsExtractor"
 }
