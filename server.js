@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+// parse application/json
+app.use(bodyParser.json());
+
 var createExcel = require('./app/createExcel');
 
 var config = require('./app/config.json')[app.get('env')];

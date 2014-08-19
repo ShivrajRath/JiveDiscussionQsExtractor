@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-xs-6 col-xs-offset-3">
                 <h1 class="text-primary">Jive Discussion Qs Extractor</h1>
-                <form role="form" action="excelSubmit" method="post">
+                <form id="excelForm" role="form" action="excelSubmit" method="post">
                     <div class="form-group">
                         <label for="jiveusername">Jive email address</label>
                         <input type="email" name="uname" class="form-control" id="jiveusername" placeholder="Enter jive email address" required>
@@ -55,10 +55,10 @@
         </div>
     </div>
 
-    <script src="/js/app.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

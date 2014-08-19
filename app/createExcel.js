@@ -143,9 +143,9 @@ module.exports = {
                         });
                     }
                 });
-                if(orc_resp.length){
+                if (orc_resp.length) {
                     self.getAnswerDetails(req, res);
-                }else{
+                } else {
                     res.send("No discussion questions available at this place yet!!!");
                 }
             } else {
@@ -158,7 +158,6 @@ module.exports = {
     getAnswerDetails: function(req, res) {
         var self = this;
         var totalRecords = orc_resp.length;
-        console.log("Total Records: " + totalRecords);
 
         var totalRecordsCheckedForAnswer = 0;
 
