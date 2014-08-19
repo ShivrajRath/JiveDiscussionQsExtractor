@@ -1,6 +1,6 @@
 {
     "name": "JiveAPI",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Jive API call to export discussion details in excel file",
     "main": "server.js",
     "dependencies": {

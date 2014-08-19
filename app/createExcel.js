@@ -113,15 +113,23 @@ module.exports = {
      * Get's the jive data and calls the excel utility
      */
     getJiveData: function(req, res) {
-        // Clearing the array
-        orc_resp = [];
-        var self = this;
 
+        // Reset
+        orc_resp = [];
         // Get the jive community URL from the place URL
         var jiveLoc = util.getLocation(cred.placeurl);
         var jiveURL = jiveLoc.protocol + "//" + jiveLoc.hostname;
+        var url = jiveURL + "/api/core/v3/contents/?filter=type(discussion)&count=25&startIndex=0";
 
-        jive.getResponse(jiveURL + "/api/core/v3/contents/?filter=type(discussion)&count=99", function(resp) {
+        this.paginateRequests(url, req, res);
+
+    },
+
+    // Paginate through the requests to get the entire result set
+    paginateRequests: function(url, req, res) {
+        var self = this;
+
+        jive.getResponse(url, function(resp) {
             // If response is not 200 code, then it returns a message
             if (resp.message) {
                 res.send(resp.message + " Please try again!!!");
@@ -143,8 +151,14 @@ module.exports = {
                         });
                     }
                 });
-                if (orc_resp.length) {
+
+                var next = resp.links.next;
+
+                // If no next url is present
+                if (orc_resp.length && !next) {
                     self.getAnswerDetails(req, res);
+                } else if (next) {
+                    self.paginateRequests(next, req, res);
                 } else {
                     res.send("No discussion questions available at this place yet!!!");
                 }
