@@ -28,29 +28,34 @@ module.exports = {
             beforeCellWrite: function(row, cellData) {
                 return util.getHTMLText(cellData);
             },
-            width: 40
+            width: 70
         }, {
             caption: 'Description',
             type: 'string',
             beforeCellWrite: function(row, cellData) {
                 return util.getHTMLText(cellData);
-            }
+            },
+            width: 70
         }, {
             caption: 'Reply Count',
-            type: 'number'
+            type: 'number',
+            width: 15
         }, {
             caption: 'Status',
-            type: 'string'
+            type: 'string',
+            width: 15
         }, {
             caption: 'Resolved',
-            type: 'string'
+            type: 'string',
+            width: 15
         }, {
             caption: 'Updated Date',
             type: 'string',
             beforeCellWrite: function(row, cellData) {
                 var date = new Date(cellData);
                 return date.toLocaleDateString()
-            }
+            },
+            width: 30
         }, {
             caption: 'Tags',
             type: 'string',
@@ -60,10 +65,12 @@ module.exports = {
                 } else {
                     return "";
                 }
-            }
+            },
+            width: 60
         }, {
             caption: 'Question Author',
-            type: 'string'
+            type: 'string',
+            width: 30
         }, {
             caption: 'Answer Description',
             type: 'string',
@@ -73,7 +80,8 @@ module.exports = {
                 } else {
                     return "";
                 }
-            }
+            },
+            width: 70
         }, {
             caption: 'Answer Updated Date',
             type: 'string',
@@ -84,10 +92,12 @@ module.exports = {
                 } else {
                     return "";
                 }
-            }
+            },
+            width: 30
         }, {
             caption: 'Answer Author',
-            type: 'string'
+            type: 'string',
+            width: 30
         }];
 
         // Excel Rows
