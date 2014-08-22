@@ -5,6 +5,6 @@ Simply enter your jive email address, password and the place url and the app wil
 The app is hosted at: jivediscussionextractor.herokuapp.com
 
 ![Image of JiveExtractor]
-http://i60.tinypic.com/30malbb.jpg
+(http://i60.tinypic.com/30malbb.jpg)
 
 More about the code at http://novicelab.org/project/project-discus…e-using-v3-api/459/
